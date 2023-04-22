@@ -12,7 +12,7 @@ frontend:
         - npm ci
     build:
       commands:
-        - mpm run build
+        - npm run build
   artifacts:
     baseDirectory: dist
     files:
