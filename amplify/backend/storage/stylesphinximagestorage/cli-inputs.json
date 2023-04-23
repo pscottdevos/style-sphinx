@@ -1,0 +1,14 @@
+{
+  "resourceName": "stylesphinximagestorage",
+  "policyUUID": "ec057a1a",
+  "bucketName": "stylesphinx7e24729f516b4e0c973b5b0fbf11a448",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
