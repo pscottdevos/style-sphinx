@@ -3,6 +3,7 @@ import "./App.css";
 import "@aws-amplify/ui-react/styles.css";
 import { API, Storage } from "aws-amplify";
 import {
+  defaultDarkModeOverride,
   Button,
   Flex,
   Heading,
@@ -18,6 +19,11 @@ import {
   createNote as createNoteMutation,
   deleteNote as deleteNoteMutation,
 } from "./graphql/mutations";
+
+const theme = {
+  name: 'system',
+  overrides: [defaultDarkModeOverride],
+};
 
 const App = ({ signOut }) => {
   const [notes, setNotes] = useState([]);
@@ -72,7 +78,7 @@ const App = ({ signOut }) => {
   }
 
   return (
-    <ThemeProvider colorMode="dark">
+    <ThemeProvider theme={theme} colorMode="system">
       <View className="App">
         <Heading level={1}>My Notes App</Heading>
         <View as="form" margin="3rem 0" onSubmit={createNote}>
